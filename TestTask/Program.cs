@@ -135,14 +135,10 @@ namespace TestTask
             switch (charType)
             {
                 case CharType.Consonants:
-                    letters = letters
-                        .Where(l => !l.Letter.IsConsonants())
-                        .ToList();
+                    letters.RemoveAll(l => l.Letter.IsConsonants());
                     break;
                 case CharType.Vowel:
-                    letters = letters
-                        .Where(l => !l.Letter.IsVowels())
-                        .ToList();
+                    letters.RemoveAll(l => l.Letter.IsVowels());
                     break;
             }
         }
