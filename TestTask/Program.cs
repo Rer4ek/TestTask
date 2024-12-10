@@ -115,8 +115,6 @@ namespace TestTask
                         letterStatsResult.Add(letterStats);
                     }
                     letterStats.IncStatistic();
-
-                    lastChar = c;
                 }
             }
 
@@ -136,10 +134,10 @@ namespace TestTask
             {
                 case CharType.Consonants:
                     letters.RemoveAll(l => l.Letter.IsConsonants());
-                    break;
+                    return;
                 case CharType.Vowel:
                     letters.RemoveAll(l => l.Letter.IsVowels());
-                    break;
+                    return;
             }
         }
 

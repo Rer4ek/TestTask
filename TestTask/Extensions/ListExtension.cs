@@ -15,7 +15,7 @@ namespace TestTask
             {
                 if (match(list[i]))
                 {
-                    ++count;
+                    count++;
                     list.RemoveAt(i);
                 }
             }
